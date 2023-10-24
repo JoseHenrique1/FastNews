@@ -1,9 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function CardNew({title, description, urlImg, urlSite, author}) {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card className='mt-2 mb-2' style={{ width: '24rem' }}>
       <Card.Img variant="top" src={urlImg} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>

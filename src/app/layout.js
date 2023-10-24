@@ -17,9 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className} >
         <Header/>
-        <main className='container-fluid' style={{minHeight: "80vh"}}>
-          {children}
-        </main>
+        {children}
         <Footer/>
       </body>
     </html>
