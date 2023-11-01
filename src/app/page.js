@@ -23,7 +23,7 @@ export default function Home() {
           return {"title":currentNew.title, "description":currentNew.description, "urlImg":currentNew.urlToImage, "urlSite":currentNew.url, "author":currentNew.author}
       });
       
-      if (search == "América do Sul") {
+      if (search == "Brasil") {
         setDataOne(news); 
       }
       else if (search == "Futebol") {
@@ -37,7 +37,7 @@ export default function Home() {
 
   
   useEffect(()=>{
-    load("América do Sul");
+    load("Brasil");
     load("Futebol");
     load("Europa");
   }, [])
@@ -51,7 +51,7 @@ export default function Home() {
         return <CardNew key={id} title={item.title} description={item.description} urlImg={item.urlImg} urlSite={item.urlSite} author={item.author} />
       })}
       
-      <h1 className="mt-2">Futebool</h1>
+      <h1 className="mt-2">Futebol</h1>
       {datatwo[0] && datatwo.map((item,id)=>{
         return <CardNew key={id} title={item.title} description={item.description} urlImg={item.urlImg} urlSite={item.urlSite} author={item.author} />
       })}
