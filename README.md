@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FastNews
 
-## Getting Started
+<img src="imagem.png" alt="Exemplo imagem">
 
-First, run the development server:
+> Site de notícias sobre diversos temas: Brasil, Futebol, Europa e muito mais. Pesquise por temas especificos ou vejas os destaques na pagina inicial.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+
+## 💻 Pré-requisitos
+
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
+
+* Você instalou a versão mais recente do Node js.
+* Você possui o npm instalado (gerenciador de pacotes do node).
+* Você é cadastrado na NewsApi (https://newsapi.org/)
+
+## 🚀 Instalando FastNews
+
+Para instalar o FastNews, siga estas etapas:
+
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ☕ Usando FastNews
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Para usar FastNews, siga estas etapas:
 
-## Learn More
+Passo 1: Crie um arquivo chamado 'my_env.js' na pasta app.
 
-To learn more about Next.js, take a look at the following resources:
+Passo2: Escreva o seguinte código no arquivo, substituindo a string vazia pela sua chave da NewsApi:
+```
+let apikey = " ";
+export default apikey;
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Passo 3: Inicie o projeto, escrevendo o seguinte código no terminal:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+npm run dev
+```
 
-## Deploy on Vercel
+## 🤝 Colaboradores
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/104796730?v=4" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <sub>
+          <b>José Henrique</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+
