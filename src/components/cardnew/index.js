@@ -1,4 +1,5 @@
 import Button from 'react-bootstrap/Button';
+import Link from 'next/link';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./style.css"
@@ -16,7 +17,7 @@ function CardNew({title, description, urlImg, urlSite, author}) {
           Escrito por {author}.
         </Card.Text>
       </Card.Body>
-      <Button variant="primary">Site</Button>
+      <Link target='_blank' className='btn btn-primary' href={urlSite} >Site</Link>
     </Card>
   );
 }
