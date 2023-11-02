@@ -1,5 +1,5 @@
 'use client';
-import CardNew from "@/components/cardnew";
+import CardNew from "@/components/cardnew/index";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from "react";
 
