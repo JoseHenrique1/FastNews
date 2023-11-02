@@ -1,6 +1,6 @@
 # FastNews
 
-<img src="imagem.png" alt="Exemplo imagem">
+<img src="./public/fastnews.png" alt="Exemplo imagem">
 
 > Site de notícias sobre diversos temas: Brasil, Futebol, Europa e muito mais. Pesquise por temas especificos ou vejas os destaques na pagina inicial.
 
