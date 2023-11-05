@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
-function FiedSearch({search, setSearch}) {
+function FiedSearch({search, setSearch, handleSearch}) {
   return (
       <InputGroup className="mb-3 ">
         <Form.Control
@@ -12,7 +12,10 @@ function FiedSearch({search, setSearch}) {
           value={search}
           onChange={(e)=>setSearch(e.target.value)}
         />
-        <Button variant="outline-secondary" id="button-addon2">
+        <Button 
+          variant="outline-secondary" 
+          id="button-addon2"
+          onClick={handleSearch}>
           Search
         </Button>
       </InputGroup>
