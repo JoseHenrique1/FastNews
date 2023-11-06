@@ -4,7 +4,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 
 function FiedSearch({search, setSearch, handleSearch}) {
   return (
-      <InputGroup className="mb-3 ">
+      <InputGroup className="mb-3 w-50 ">
         <Form.Control
           placeholder=""
           aria-label="Recipient's username"

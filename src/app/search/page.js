@@ -27,7 +27,7 @@ function Search() {
     
     return ( 
         <main style={{minHeight: "74.5vh"}}>
-            <div className="container-sm mt-3">
+            <div className="container-sm mt-3 d-flex justify-content-center">
                 <FiedSearch search={search} setSearch={setSearch} handleSearch={handleSearch}/>
             </div>
 
@@ -35,7 +35,15 @@ function Search() {
                 {allnews && allnews.map((item,id)=>{
                     return <CardNew key={id} title={item.title} description={item.description} urlImg={item.urlImg} urlSite={item.urlSite} author={item.author} />
                 })}
-            </div>   
+            </div>  
+
+            <div className="container-fluid d-flex justify-content-center">
+                <div className="d-flex w-25 justify-content-around">
+                    <button className="btn btn-outline-primary" >Before</button>
+                    <button className="btn btn-outline-primary" >Next</button>
+                </div>
+                
+            </div> 
         </main>
      );
 }
