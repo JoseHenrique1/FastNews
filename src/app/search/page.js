@@ -1,11 +1,13 @@
 'use client'
 import FiedSearch from "@/components/fieldsearch";
 import CardNew from "@/components/cardnew";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import apikey from "../my_env";
 function Search() {
     const [search, setSearch] = useState("");
     const [allnews, setAllnews] = useState([]);
+    const [newsPerPage, setNewsPerPage] = useState([]);
+    const [page, setPage] = useState(0);
 
     async function handleSearch() {
         let url = `https://newsapi.org/v2/everything?q=${search}&sortBy=publishedAt&apiKey=${apikey}`
@@ -14,15 +16,16 @@ function Search() {
         .catch((error)=>{console.log("Erro na requisição")});
 
         let news = await requisicao.articles;
-        news = news.slice(0,9);
         news = await news.map( (currentNew)=> {
             return {"title":currentNew.title, "description":currentNew.description, "urlImg":currentNew.urlToImage, "urlSite":currentNew.url, "author":currentNew.author}
         });
 
         setAllnews(news);
-        console.log(allnews)
     }
-    
+
+    useEffect(()=>{
+        setNewsPerPage(allnews.slice(page,page+9 ))
+    }, [page, allnews]);   
 
     
     return ( 
@@ -32,15 +35,23 @@ function Search() {
             </div>
 
             <div className="container-fluid mt-3 mb-3 d-flex flex-wrap justify-content-around h-100" >
-                {allnews && allnews.map((item,id)=>{
+                {newsPerPage && newsPerPage.map((item,id)=>{
                     return <CardNew key={id} title={item.title} description={item.description} urlImg={item.urlImg} urlSite={item.urlSite} author={item.author} />
                 })}
             </div>  
 
-            <div className="container-fluid d-flex justify-content-center">
+            <div className="container-fluid d-flex justify-content-center mb-3">
                 <div className="d-flex w-25 justify-content-around">
-                    <button className="btn btn-outline-primary" >Before</button>
-                    <button className="btn btn-outline-primary" >Next</button>
+                    <button 
+                        className="btn btn-outline-primary" 
+                        onClick={()=>{setPage(p=>p-9)}}
+                        disabled={page == 0? true : false}
+                        >Before</button>
+                    <button 
+                        className="btn btn-outline-primary" 
+                        onClick={()=>{setPage(p=>p+9)}} 
+                        disabled={page >= allnews.length? true : false}
+                        >Next</button>
                 </div>
                 
             </div> 
