@@ -1,4 +1,6 @@
 'use client'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap-icons/font/bootstrap-icons.min.css"
 import FiedSearch from "@/components/fieldsearch";
 import CardNew from "@/components/cardnew";
 import { useEffect, useState } from "react";

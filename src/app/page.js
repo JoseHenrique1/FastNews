@@ -1,4 +1,6 @@
 'use client';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap-icons/font/bootstrap-icons.min.css"
 import CardNew from "@/components/cardnew/index";
 import { useState, useEffect } from "react";
 
@@ -45,16 +47,16 @@ export default function Home() {
   
   return (
     <main className='row container-fluid justify-content-around' style={{minHeight: "80vh"}}>
-      <h1 className="mt-2">Brasil </h1>
+      <h1 className="mt-3">Brasil </h1>
       {dataone && dataone.map((item,id)=>{
         return <CardNew key={id} title={item.title} description={item.description} urlImg={item.urlImg} urlSite={item.urlSite} author={item.author} />
       })}
       
-      <h1 className="mt-2">Futebol</h1>
+      <h1 className="mt-3">Futebol</h1>
       {datatwo[0] && datatwo.map((item,id)=>{
         return <CardNew key={id} title={item.title} description={item.description} urlImg={item.urlImg} urlSite={item.urlSite} author={item.author} />
       })}
-      <h1 className="mt-2">Europa</h1>
+      <h1 className="mt-3">Europa</h1>
       {datathree[0] && datathree.map((item,id)=>{
         return <CardNew key={id} title={item.title} description={item.description} urlImg={item.urlImg} urlSite={item.urlSite} author={item.author} />
       })}

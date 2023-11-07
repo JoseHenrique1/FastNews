@@ -7,7 +7,7 @@ function Footer() {
         <footer className='container-fluid bg-dark text-white pt-1 pb-1'>
             <p className='text-center'>@FastNews</p>
             <div className='container-fluid d-flex justify-content-center'>
-                <div className='d-flex w-25 justify-content-around'>
+                <div className='d-flex justify-content-around w-25 '>
                     <i className="h2 bi bi-github"/>
                     <i className="h2 bi bi-google"/>
                     <i className="h2 bi bi-instagram"/>
