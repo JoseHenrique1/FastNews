@@ -1,6 +1,5 @@
 'use client';
 import CardNew from "@/components/cardnew/index";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from "react";
 
 import apikey from "./my_env";
