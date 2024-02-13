@@ -16,22 +16,27 @@ export default function Home() {
       let url = `https://newsapi.org/v2/everything?q=${search}&sortBy=publishedAt&apiKey=${apikey}`
       let requisicao = await fetch(url)
       .then((response)=> response.json())
-      .catch((error)=>{console.log("Erro na requisição")});
+      .catch((error)=>{ return {msg:'error'}});
 
-      let news = await requisicao.articles;
-      news = news.slice(0,9);
-      news = await news.map( (currentNew)=> {
-          return {"title":currentNew.title, "description":currentNew.description, "urlImg":currentNew.urlToImage, "urlSite":currentNew.url, "author":currentNew.author}
-      });
-      
-      if (search == "Brasil") {
-        setDataOne(news); 
-      }
-      else if (search == "Futebol") {
-        setDataTwo(news)
+      if (!requisicao.msg) {
+        let news = await requisicao.articles;
+        news = news.slice(0,9);
+        news = await news.map( (currentNew)=> {
+            return {"title":currentNew.title, "description":currentNew.description, "urlImg":currentNew.urlToImage, "urlSite":currentNew.url, "author":currentNew.author}
+        });
+        
+        if (search == "Brasil") {
+          setDataOne(news); 
+        }
+        else if (search == "Futebol") {
+          setDataTwo(news)
+        }
+        else {
+          setDataThree(news)
+        }
       }
       else {
-        setDataThree(news)
+        console.log('kkkk')
       }
       
   }
