@@ -1,61 +1,30 @@
-# FastNews
+# React + TypeScript + Vite
 
-<img src="./public/fastnews.png" alt="Exemplo imagem">
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-> Site de notícias sobre diversos temas: Brasil, Futebol, Europa e muito mais. Pesquise por temas especificos ou vejas os destaques na pagina inicial.
+Currently, two official plugins are available:
 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## Expanding the ESLint configuration
 
-## 💻 Pré-requisitos
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-Antes de começar, verifique se você atendeu aos seguintes requisitos:
+- Configure the top-level `parserOptions` property like this:
 
-* Você instalou a versão mais recente do Node js.
-* Você possui o npm instalado (gerenciador de pacotes do node).
-* Você é cadastrado na NewsApi (https://newsapi.org/)
-
-## 🚀 Instalando FastNews
-
-Para instalar o FastNews, siga estas etapas:
-
-```
-npm install
-```
-
-
-## ☕ Usando FastNews
-
-Para usar FastNews, siga estas etapas:
-
-Passo 1: Crie um arquivo chamado 'my_env.js' na pasta app.
-
-Passo2: Escreva o seguinte código no arquivo, substituindo a string vazia pela sua chave da NewsApi:
-```
-let apikey = " ";
-export default apikey;
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
 ```
 
-Passo 3: Inicie o projeto, escrevendo o seguinte código no terminal:
-
-```
-npm run dev
-```
-
-## 🤝 Colaboradores
-
-
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/104796730?v=4" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
-        <sub>
-          <b>José Henrique</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
-
-
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
