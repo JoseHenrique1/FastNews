@@ -1,7 +1,7 @@
 import photo from "../assets/img/usina.jpg"
 export function CardNews() {
   return (
-    <div className="bg-cyan-400 rounded flex flex-col max-w-screen-lg p-4 gap-1 sm:h-40 sm:gap-4 sm:flex-row">
+    <div className="bg-sky-100 dark:bg-sky-950 rounded flex flex-col max-w-screen-lg p-4 gap-1 sm:h-40 sm:gap-4 sm:flex-row">
       <img
         src={photo}
         alt=""

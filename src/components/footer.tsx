@@ -2,7 +2,7 @@ import { Github, Instagram, Linkedin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-blue-800 p-4 space-y-2">
+    <footer className="bg-sky-800 dark:bg-slate-900 p-4 space-y-2">
       <h1 className="w-full text-center text-2xl font-medium text-gray-300">Fastnews</h1>
       <div className="flex justify-center gap-4">
         <a href="https://github.com/JoseHenrique1" target="_blank">

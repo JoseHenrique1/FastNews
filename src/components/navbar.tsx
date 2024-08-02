@@ -1,20 +1,19 @@
-import { Sun } from "lucide-react";
 import { Link } from "./link";
 import { links, LinkProvider } from "../contexts/link-context";
+import { ButtonTheme } from "./button-theme";
 
 export function Navbar() {
+
+  
   return (
-    <nav className="bg-blue-800 p-4 flex flex-col gap-4 sm:flex-row">
+    <nav className="bg-sky-800 dark:bg-slate-900 p-4 flex flex-col gap-4 sm:flex-row">
       <LinkProvider>
         {links.map(link => (
           <Link link={link} />
         ))}
       </LinkProvider>
 
-      <div className="flex gap-1 sm:mr-0 sm:ml-auto cursor-pointer">
-        <Sun color="#d1d5db" />
-        <p className="text-gray-300">Light</p>
-      </div>
+      <ButtonTheme />
     </nav>
   );
 }

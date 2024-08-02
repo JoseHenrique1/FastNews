@@ -3,10 +3,9 @@ import { useRef } from "react";
 
 export function Input() {
   const inputRef = useRef<HTMLInputElement>(null);
-
+ 
   function handleClickIconSearch() {
     console.log("pesquisa");
-    
   }
 
 
@@ -16,10 +15,10 @@ export function Input() {
         ref={inputRef}
         type="text"
         placeholder="To search"
-        className="peer w-full focus:outline-none sm:w-auto" />
+        className="peer w-full text-slate-700 dark:text-slate-700 focus:outline-none sm:w-auto" />
       <Search
         onClick={handleClickIconSearch}
-        className="flex peer-focus:bg-red-300 cursor-pointer" />
+        className="flex text-slate-900 peer-focus:text-sky-600 cursor-pointer " />
     </div>
   );
 }
