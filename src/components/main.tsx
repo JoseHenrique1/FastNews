@@ -1,4 +1,5 @@
 import { CardNews } from "./card-news";
+import { CarouselNews } from "./carousel-news";
 export function Main() {
   return (
     <main className="bg-gray-50 p-4 gap-4 grid grid-cols-12">
@@ -21,9 +22,8 @@ export function Main() {
           <h1 className="text-2xl font-medium">Champions League</h1>
           <h2>The best football league in the world</h2>
         </div>
-        <div className="bg-cyan-400 w-60 h-40">
-          CARROUSEL
-        </div>
+        <CarouselNews />
+        
         <div className="border-y-2 border-cyan-400 p-4">
           <h1>About</h1>
           <p>Web site of current news and ...</p>
