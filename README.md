@@ -1,8 +1,8 @@
-# FastNews
+# Fastnews
 
-<img src="./public/fastnews.png" alt="Exemplo imagem">
+<img src="./src/assets/img/fastnews_dark.png" alt="Exemplo imagem">
 
-> Site de notícias sobre diversos temas: Brasil, Futebol, Europa e muito mais. Pesquise por temas especificos ou vejas os destaques na pagina inicial.
+> Site de notícias sobre diversos temas: Futebol, games, famosos e muito mais. Pesquise por temas especificos ou veja o slider, além disso, você pode trocar o tema da página.
 
 
 
@@ -10,36 +10,34 @@
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-* Você instalou a versão mais recente do Node js.
-* Você possui o npm instalado (gerenciador de pacotes do node).
-* Você é cadastrado na NewsApi (https://newsapi.org/)
+* Você instalou o `Node`;
+* Você possui a apiKey no site [NewsApi](https://newsapi.org/docs/get-started).
 
-## 🚀 Instalando FastNews
+## 🚀 Instalando Fastnews
 
-Para instalar o FastNews, siga estas etapas:
+Para instalar o Fastnews, siga estas etapas:
 
 ```
-npm install
+npm i
 ```
 
-
-## ☕ Usando FastNews
-
-Para usar FastNews, siga estas etapas:
-
-Passo 1: Crie um arquivo chamado 'my_env.js' na pasta app.
-
-Passo2: Escreva o seguinte código no arquivo, substituindo a string vazia pela sua chave da NewsApi:
+Renomear o `env.example` para `.env` e preencher os seguintes campos
 ```
-let apikey = " ";
-export default apikey;
+VITE_API="https://newsapi.org/v2"
+VITE_API_KEY="sua api key"
 ```
 
-Passo 3: Inicie o projeto, escrevendo o seguinte código no terminal:
+## ☕ Usando Fastnews
+
+Para usar Fastnews, siga estas etapas:
 
 ```
 npm run dev
 ```
+
+
+
+
 
 ## 🤝 Colaboradores
 
@@ -49,7 +47,7 @@ npm run dev
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/104796730?v=4" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/104796730?v=4" width="100px;" alt="Foto do José Henrique no GitHub"/><br>
         <sub>
           <b>José Henrique</b>
         </sub>
@@ -57,5 +55,3 @@ npm run dev
     </td>
   </tr>
 </table>
-
-
