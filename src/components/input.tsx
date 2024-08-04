@@ -7,8 +7,14 @@ export function Input() {
   const inputRef = useRef<HTMLInputElement>(null);
  
   function handleClickIconSearch() {
-    console.log("pesquisa");
     handleSearch(search);
+  }
+
+  function handleClickEnter(e:React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key === "Enter") {
+      handleSearch(search)
+    }
+    
   }
 
   function onChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -21,6 +27,7 @@ export function Input() {
       <input
         ref={inputRef}
         value={search}
+        onKeyUp={handleClickEnter}
         onChange={onChange}
         type="text"
         placeholder="To search"
