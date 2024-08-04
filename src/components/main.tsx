@@ -3,32 +3,10 @@ import { CardNews } from "./card-news";
 import { CarouselNews } from "./carousel-news";
 import { NewsContext } from "@/contexts/news-context";
 
-import photo1 from "../assets/img/futebol.jpg"
-import photo2 from "../assets/img/fastnews_logo.png"
-import photo3 from "../assets/img/aaa.jpeg"
+
 export function Main() {
   const { news } = useContext(NewsContext)
-  /* const news = [
-    {
-      title: "a",
-      description: "hahaha aha aha aa a a a ahahahaha a a haahhaha a ahaha aa ahahahaha ahaaha a a",
-      urlToImage: photo1,
-      url: "https://www.google.com",
-    },
-    {
-      title: "a",
-      description: "hahaha aha aha aa a a a ahahahaha a a haahhaha a ahaha aa ahahahaha ahaaha a a",
-      urlToImage: photo2,
-      url: "https://www.google.com",
-    },
-    {
-      title: "a",
-      description: "hahaha aha aha aa a a a ahahahaha a a haahhaha a ahaha aa ahahahaha ahaaha a a",
-      urlToImage: photo3,
-      url: "https://www.google.com",
-    },
-    
-  ] */
+
   return (
     <main className="bg-white dark:bg-slate-800 p-4 gap-4 grid grid-cols-12">
 
@@ -48,9 +26,6 @@ export function Main() {
                 {...currentNew} />
             ))
           }
-          {/* <CardNews />
-          <CardNews />
-          <CardNews /> */}
         </div>
       </div>
 
@@ -64,7 +39,7 @@ export function Main() {
 
         <div className="border-y-2 border-cyan-400 p-4">
           <h1>About</h1>
-          <p className="text-slate-600 dark:text-slate-400">Web site of current news and ...</p>
+          <p className="text-slate-600 dark:text-slate-400">News site about various topics: Soccer, games, celebrities, and much more. Search for specific topics or check out the slider. Additionally, you can change the page theme.</p>
         </div>
       </div>
 
