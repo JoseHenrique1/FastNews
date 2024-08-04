@@ -44,9 +44,15 @@ export function NewsProvider({ children }: NewsProviderProps) {
       .catch(() => null);
 
     if (response && response.status === "ok") {
-      console.log(response);
+      
+      const currentNews = response.articles;
+      const filteredNews = currentNews.filter(news=>(
+        news.description!=null
+        &&
+        news.urlToImage!=null
+      ))
 
-      setNews(response.articles);
+      setNews(filteredNews);
     }
   }
 
