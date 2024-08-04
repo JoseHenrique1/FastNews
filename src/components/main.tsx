@@ -18,7 +18,7 @@ export function Main() {
         <div className="space-y-4">
           {
             news.length == 0?
-            <p>Nenhuma pesquisa sobre!</p>
+            <p>News not found</p>
             :
             news.map((currentNew, index) => (
               <CardNews
