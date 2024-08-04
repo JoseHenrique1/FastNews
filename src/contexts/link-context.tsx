@@ -9,12 +9,12 @@ type LinkContextType = {
   setLink: (link: string) => void,
 };
 
-export const links = ["Brazil", "Sports", "Medicine", "Famous"]
+export const links = ["Football", "Sports", "Medicine", "Famous", "Games"]
 
 export const LinkContext = createContext({} as LinkContextType);
 
 export function LinkProvider  ({ children }: LinkProviderProps) {
-  const [link, setLink] = useState("Brazil");
+  const [link, setLink] = useState("Football");
 
   return (
     <LinkContext.Provider
