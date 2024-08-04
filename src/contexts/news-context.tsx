@@ -24,7 +24,10 @@ type NewsProviderProps = {
 
 type NewsContextType = {
   news: news[],
-  setNews: React.Dispatch<React.SetStateAction<news[]>>
+  setNews: React.Dispatch<React.SetStateAction<news[]>>,
+  search: string,
+  setSearch: React.Dispatch<React.SetStateAction<string>>,
+  handleSearch: (keyword: string)=>void
 };
 
 export const NewsContext = createContext({} as NewsContextType);
@@ -32,6 +35,7 @@ export const NewsContext = createContext({} as NewsContextType);
 export function NewsProvider({ children }: NewsProviderProps) {
   const { link } = useContext(LinkContext);
   const [news, setNews] = useState<news[]>([]);
+  const [search, setSearch] = useState<string>("");
 
   async function getNews(keyword: string) {
     const response = await fetch(`${api}/top-headlines?q=${keyword}&apiKey=${apiKey}`)
@@ -46,6 +50,10 @@ export function NewsProvider({ children }: NewsProviderProps) {
     }
   }
 
+  function handleSearch(keyword: string) {
+    getNews(keyword)
+  }
+
   useEffect(() => {
     getNews(link);
   }, [link])
@@ -57,6 +65,10 @@ export function NewsProvider({ children }: NewsProviderProps) {
       value={{
         news,
         setNews,
+        search,
+        setSearch,
+        handleSearch
+
 
       }}
     >
