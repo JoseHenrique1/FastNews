@@ -11,7 +11,7 @@
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 * Você instalou o `Node`;
-* Você possui a apiKey no site [NewsApi](https://newsapi.org/docs/get-started).
+* Você possui a apiKey no site de notícias [The Guardian](https://open-platform.theguardian.com/access/).
 
 ## 🚀 Instalando Fastnews
 
