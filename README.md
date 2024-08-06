@@ -23,7 +23,7 @@ npm i
 
 Renomear o `env.example` para `.env` e preencher os seguintes campos
 ```
-VITE_API="https://newsapi.org/v2"
+VITE_API="https://content.guardianapis.com"
 VITE_API_KEY="sua api key"
 ```
 
